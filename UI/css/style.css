@@ -1,0 +1,456 @@
+
+body {
+    font: 16px/1.5 'Segoe UI', Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    /* background: #2e2e2e; */
+}
+
+/* global */
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; 
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    height: 40px;
+    background: orangered;
+    border-box: 1px;
+    border-radius: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+/* header */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))/*, url('../images/mentorship.png')*/; 
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 30px;
+    border-bottom: #000000 3px solid;
+}
+
+header a, #bodyContent a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #logo {
+    float: left;
+}
+
+header #logo h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: -55px;
+}
+
+header a:hover, #bodyContent a:hover {
+    color: #000000;
+    font-weight: bolder;
+}
+
+
+/* body content */
+
+#bodyContent {
+    padding-top: 1px;
+    min-height: 450px;
+    /* background: url('../images/mentor.png') no-repeat 0px -250px ; */
+    background-color: #2e2e2e;
+    background-size: cover; 
+    justify-content: center;
+    color:#ffffff;
+    border-bottom: #000000 3px solid; 
+}
+
+#bodyContent .index-image {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+}
+
+#bodyContent p {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#bodyContent .button {
+    height: 40px;
+    background: orangered;
+    border-box: 1px;
+    border-radius: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+#bodyContent a:hover {
+    color: rgba(0, 0, 0);
+}
+
+/* footer styling */
+
+footer {
+    min-height: 10px;
+    padding: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    text-align: center; 
+}
+
+
+/* modal styling */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-content {
+    background-color: antiquewhite;
+    margin: 7.5% auto;
+    padding: 0;
+    width: 70%;
+    border: 1px;
+    border-block-end-color: #ffffff;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8), 0 7px 20px 0 rgba(0, 0, 0, 0.7);    
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.modal-header, .modal-footer {
+    background: #7b7a7a;;
+    color: #ffffff;
+    padding: 15px;
+    margin-top: o;
+
+}
+
+.modal-body {
+    padding: 10px 20px;
+
+}
+
+.modal-header .button {
+    float: right;
+    font-size: 25px;
+}
+
+#welcomingModalElts .modal-content .modal-header span, 
+#sessionBoardModalElts .modal-header span,
+#sessionBoardModalElts2 .modal-header button {
+    margin-top: -50px;
+}
+
+#welcomingModalElts .modal-content .modal-header span a, 
+#sessionBoardModalElts .modal-header span a,
+#user-list #boxes .container button a,
+#sessionBoardModalElts2 .modal-header button {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bolder;
+    text-decoration: none;
+    justify-content: center;
+}
+
+#welcomingModalElts .modal-content .modal-body p, 
+#sessionBoardModalElts .modal-body p {
+    padding: 30px;
+    float: auto;
+    color: orangered;
+    font-weight: bold;
+}
+
+#main #overview  .modal-body .signUp-form input, 
+#main #overview  .modal-body .signUp-form textarea,
+#signInModal .modal-content  .modal-body input{
+    width: 90%;
+    padding: 10px;
+    /* background-color: #ffffff; */
+    color: #000000;
+}
+
+.modal-footer .button:hover, .modal-footer .button:focus, 
+.modal-header .button:hover, .modal-header .button:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-footer .button {
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ------------------------SIGN IN PAGE---------------------------------- */
+
+/* #main {
+    background-color: #b3b3b3;
+    min-height: 500px;
+} */
+
+/* -------------------------USER BOARD----------------------------------- */
+
+.page-info {
+    margin: 20px;
+    padding: 20px;
+}
+
+
+/* boxes */
+
+#boxes {
+    margin-top:20px;
+    padding-left: 0px;
+
+}
+
+#boxes .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#boxes .box {
+    display: inline;
+    align-content: center;
+    float: left;
+    text-align: center;
+    width: 23%;
+    padding: 10px;
+    margin: 0;
+}
+
+.container .innerbox {
+    width: 90%;
+    background-color: #7b7a7a;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+
+#boxes .box img {
+    width: 120px;
+    height: auto;
+}
+
+/* userBoard modal styling  */
+
+.modal-header .innerbox img {
+    width: 120px;
+    height: auto;
+}
+
+#MentorModal .modal-footer button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+/* -------------------------ADMIN BOARD----------------------------------- */
+
+
+#user-list #boxes .container {
+    background-color: #b3b3b3;
+    border-radius: 5%;
+}
+
+#user-list #boxes .container .box {
+    text-align: left;
+    background-color: #b3b3b3; ;
+}
+
+#user-list #boxes .container .box .innerbox {
+    background-color: #b3b3b3;
+}
+
+#user-list #boxes .container .box .innerbox img {
+    width: 150px;
+    height: auto;
+}
+
+#user-list #boxes .container .box .innerbox h3 {
+    background-color: #7b7a7a;
+}
+
+#user-list #boxes .container .box .innerbox .space-line {
+    line-height: 1.9em;
+}
+
+#user-list #boxes .container .box .innerbox input {
+    width: 10%;
+    padding: 4px;
+    line-height: 1.9em;
+}
+
+#user-list #boxes .container .box .innerbox p {
+    line-height: 2.15em;
+}
+
+#user-list #boxes .container .box .innerbox p  a {
+    padding: 1px;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #ffffff;
+    line-height: 1em;
+    text-decoration: none
+    
+}
+
+#user-list #boxes .container .box .innerbox p  a:hover {
+    color: #000000;
+   
+}
+
+#main #overview {
+    width: 100%;
+    min-height: 300px;
+    background:#b3b3b3;
+    padding: 0;
+    display: grid;
+}
+
+#main #overview p{
+    padding-left: 50px;
+}
+
+#main #overview p span {
+    color: orangered;
+}
+
+#main  #overview ul {
+    padding: 0 0 25px 15px;
+}
+
+#main  #overview li {
+    float: left;
+    display: inline;
+    padding: 10px;
+    
+}
+
+
+#main #overview .entity {
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    border-radius: 50%;
+    justify-content: center;
+    padding-left: 25px;
+
+}
+
+#main #overview .entity .inner-text {
+    text-align: center;
+    padding-top: 80px;
+}
+
+
+
+
+/* -------------------------MENTOR BOARD----------------------------------- */
+
+#user-list #boxes .container .box .innerbox .line-spacing {
+    line-height: 1em;
+}
+
+#user-list #boxes .container .box .innerbox span input {
+    line-height: 3px;;
+    float: right;
+}
+
+#main .button-line-spacing {
+    line-height: 0.3em;
+}
+
+
+
+@media(max-width: 768px) {
+    header nav {
+        float: none;
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+}
+
+
+/* ---------------------MENTORSHIP SESSION BOARD-------------------------------------- */
+
+
+#user-list #boxes .container .box-label,
+#sessionBoardModalElts .modal-content .modal-body .box-label {
+    padding: 20px;
+    font-weight: bolder;
+} 
+
+#user-list #boxes .container .box-textarea,
+#sessionBoardModalElts .modal-content .modal-body .box-textarea {
+    padding: 20px;
+}
+
+#user-list #boxes .container .box-textarea textarea,
+#sessionBoardModalElts .modal-content .modal-body .box-textarea textarea {
+    width: 100%;
+    background-color: #b3b3b3;
+    color:#000000;
+    font-weight: bold;
+}
+
+#user-list #boxes .container button {
+    float: right;
+    margin: 0 20px 20px 0;
+}
+
+
+/* ---------------Mentorship session acceptance -------------- */
+
+#sessionBoardModalElts2 .modal-body p {
+    padding: 30px;
+    float: auto;
+    color: #000000;
+    font-weight: bold;
+}
+
