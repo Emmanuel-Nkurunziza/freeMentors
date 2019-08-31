@@ -1,0 +1,32 @@
+{
+  "name": "freementors",
+  "version": "1.0.0",
+  "description": "Serior mentors volunteers to offer mentership sessions to young mentees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emmanuel-Nkurunziza/freeMentors.git"
+  },
+  "author": "Emmanuel Nkurunziza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emmanuel-Nkurunziza/freeMentors/issues"
+  },
+  "homepage": "https://github.com/Emmanuel-Nkurunziza/freeMentors#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@babel/runtime": "^7.5.5"
+  }
+}
