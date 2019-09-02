@@ -6,6 +6,7 @@ const app=express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(router);
+
 app.get('/', (req, res) => {
     return res.status(200).send({
         status: 200,
