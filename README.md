@@ -14,7 +14,7 @@ HTML, CSS, JavaScript (ES6)
 
 # UI link
 
-[freeMentorUI] (https://emmanuel-nkurunziza.github.io/freeMentors/UI/html/index.html)
+[freeMentorUI](https://emmanuel-nkurunziza.github.io/freeMentors/UI/html/index.html)
 
 
 # Heroku link Example
@@ -25,6 +25,7 @@ HTML, CSS, JavaScript (ES6)
 # API ENDPOINTS
 
 | Ressource URL | Method | Description |
+| ---------- | ------- | ---------|
 | / | GET | The index page | 
 | /api/v1/auth/signup | POST | Sign up |
 | /api/v1/auth/signin | POST | Sign in |
@@ -32,7 +33,7 @@ HTML, CSS, JavaScript (ES6)
 
 # clone the Application
 
-[GitHub] (https://github.com/Emmanuel-Nkurunziza/freeMentors)
+[GitHub](https://github.com/Emmanuel-Nkurunziza/freeMentors)
 
 
 # Tools Used
@@ -110,4 +111,4 @@ Nkurunziza Emmanuel
 
 # License
 
-© Emmanuel Nkurunziza [email] (ewink.01@gmail.com)
+© Emmanuel Nkurunziza (ewink.01@gmail.com)
