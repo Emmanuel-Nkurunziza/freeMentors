@@ -1,8 +1,16 @@
-import express from 'express';
-import usersValidation from '../validations/users';
-import UserClass from '../controllers/users';
-const router = express.Router();
-router.get('/api/v1/users',UserClass.getAllUsers);
-router.post('/api/v1/users/signup',[usersValidation],UserClass.createUser);
-router.post('/api/v1/users/signin', UserClass.signin);
+import { Router } from 'express';
+import { signin, signup, updateMentor, mentors, getMentorId } from '../controllers/users';
+import { validate } from '../middleware/validationMiddleware';
+import { isEmailUsed, hashPass, authantic, isAdmin } from '../middleware/userMiddleware';
+import { checkToken } from '../middleware/tokenMiddleware';
+
+const router = Router();
+//  api
+router.post('/auth/signup', validate, isEmailUsed, hashPass, signup); 
+router.post('/auth/signin', validate, authantic, signin);
+router.patch('/user/:userId', checkToken, isAdmin, updateMentor);//Change user to a mentor
+router.get('/mentors', checkToken, mentors);//Get all mentors
+router.get('/mentors/:userId', checkToken,getMentorId);//Get a specific mentor
+
+
 export default router;

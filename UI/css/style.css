@@ -2,7 +2,8 @@
 body {
     font: 16px/1.5 'Segoe UI', Tahoma, sans-serif;
     padding: 0;
-    margin: 0;
+    margin: 0 0 30px 0;
+    min-height: 100vh;
     /* background: #2e2e2e; */
 }
 
@@ -19,28 +20,40 @@ ul {
     padding: 0;
 }
 
-.button {
-    height: 40px;
-    background: orangered;
-    border-box: 1px;
-    border-radius: 20%;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #ffffff;
+.button  {
+    /* height: 20px; */
+    background-color: aquamarine;
+    font-size: 12px;
+    text-decoration: none;
+    border-box: 2px;
+    /* border-block-color: #000000; */
+    border-color:#000000;
+    border-radius: 5px;
+    padding: 10px;
+    /* padding-right: 20px; */
+    color: #000000;
+    
 }
+
+/* #body-text {
+    padding-bottom: 20px;
+} */
 
 /* header */
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))/*, url('../images/mentorship.png')*/; 
+    /* background-color: #000000;  */
+    width: 100%;
+    padding: 20px 0 0 20px;
+    background: #000000;
     color: #ffffff;
-    padding-top: 30px;
-    min-height: 30px;
+    padding-top: 0;
+    /* min-height: 30px; */
     border-bottom: #000000 3px solid;
 }
 
 header a, #bodyContent a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 18px;
@@ -53,15 +66,17 @@ header li {
 
 header #logo {
     float: left;
+
 }
 
 header #logo h1 {
     margin: 0;
+    color: #ffffff;
 }
 
 header nav {
     float: right;
-    margin-top: -55px;
+    margin-top: -50px;
 }
 
 header a:hover, #bodyContent a:hover {
@@ -73,14 +88,19 @@ header a:hover, #bodyContent a:hover {
 /* body content */
 
 #bodyContent {
+    /* width: 100%; */
     padding-top: 1px;
     min-height: 450px;
     /* background: url('../images/mentor.png') no-repeat 0px -250px ; */
-    background-color: #2e2e2e;
+    background-color: #ffffff;
     background-size: cover; 
     justify-content: center;
-    color:#ffffff;
-    border-bottom: #000000 3px solid; 
+    columns: #2e2e2e;;
+    /* border-bottom: #000000 3px solid;  */
+}
+
+#bodyContent #image {
+    padding-top: 20px;
 }
 
 #bodyContent .index-image {
@@ -89,7 +109,18 @@ header a:hover, #bodyContent a:hover {
     padding-bottom: 0;
 }
 
-#bodyContent p {
+/* #body-text {
+    padding-bottom: 20px;
+} */
+
+/* section {
+    float: center;
+    align-items: center;
+    display
+} */
+
+
+/* #bodyContent p {
     margin-top: 0;
     font-size: 30px;
     font-weight: bolder;
@@ -104,7 +135,28 @@ header a:hover, #bodyContent a:hover {
     padding-left: 20px;
     padding-right: 20px;
     color: #ffffff;
+} */
+
+#bodyContent #body-text {
+    width: 100%;
+    background: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+
 }
+/* #bodyContent #body-text a {
+    background-color: #e7e7e7;
+    font-size: 12px;
+    border-box: 1px;
+    border-block-color: #000000;
+    border-radius: 20%;
+    padding: 20px;
+    /* padding-right: 20px; */
+    /* color: #000000; */
+} */
 
 #bodyContent a:hover {
     color: rgba(0, 0, 0);
@@ -113,13 +165,49 @@ header a:hover, #bodyContent a:hover {
 /* footer styling */
 
 footer {
-    min-height: 10px;
-    padding: 20px;
-    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    /* background-color: #000000; */
+    text-align: center;  
+    right: 0;
+    left: 0;
+    width: 100%;    
     font-weight: bold;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: #000000;
+    color: #ffffff;
     text-align: center; 
 }
+
+/*------------------- sign up and sign in page styling----------------------------- */
+
+
+#main {
+    background-color: #ffffff;
+    padding: 0 0 30px 0;
+}
+
+#main #overview .modal-body fieldset {
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    transform: translate(-30px, -30px);
+    
+}
+
+#main #overview .modal-body {
+    display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 50px;
+}
+
+.modal-body fieldset span button a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
 
 
 /* modal styling */
@@ -137,7 +225,7 @@ footer {
 }
 
 .modal-content {
-    background-color: antiquewhite;
+    background-color: #ffffff;
     margin: 7.5% auto;
     padding: 0;
     width: 70%;
@@ -151,21 +239,23 @@ footer {
 }
 
 .modal-header, .modal-footer {
-    background: #7b7a7a;;
+    /* background: #7b7a7a;; */
+    /* color: #ffffff; */
+    padding: 7px;
+    margin-top: 0;
+    background: #000000;
     color: #ffffff;
-    padding: 15px;
-    margin-top: o;
+    text-align: center; 
 
 }
 
 .modal-body {
-    padding: 10px 20px;
-
+    padding: 10px 20px; 
 }
 
 .modal-header .button {
     float: right;
-    font-size: 25px;
+    font-size: 12px;
 }
 
 #welcomingModalElts .modal-content .modal-header span, 
@@ -178,8 +268,8 @@ footer {
 #sessionBoardModalElts .modal-header span a,
 #user-list #boxes .container button a,
 #sessionBoardModalElts2 .modal-header button {
-    font-size: 12px;
-    color: #ffffff;
+    font-size: 10px;
+    color: #000000;
     font-weight: bolder;
     text-decoration: none;
     justify-content: center;
@@ -187,12 +277,24 @@ footer {
 
 #welcomingModalElts .modal-content .modal-body p, 
 #sessionBoardModalElts .modal-body p {
-    padding: 30px;
+    padding: 10px;
     float: auto;
-    color: orangered;
-    font-weight: bold;
+    color: #000000;
+}
+#welcomingModalElts .modal-content .modal-body fieldset{
+    width: 40%;
+    transform: translate(310px, 0px);
 }
 
+#main #overview {
+    width: 100%;
+    min-height: 300px;
+    background: #ffffff;
+    padding: 0;
+    display: grid;
+}
+
+#main #overview  .modal-body .signIn-form input,
 #main #overview  .modal-body .signUp-form input, 
 #main #overview  .modal-body .signUp-form textarea,
 #signInModal .modal-content  .modal-body input{
@@ -201,6 +303,8 @@ footer {
     /* background-color: #ffffff; */
     color: #000000;
 }
+
+
 
 .modal-footer .button:hover, .modal-footer .button:focus, 
 .modal-header .button:hover, .modal-header .button:focus {
@@ -211,9 +315,10 @@ footer {
 
 .modal-footer .button {
     justify-content: center;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
+
 
 
 /* ------------------------SIGN IN PAGE---------------------------------- */
@@ -235,14 +340,17 @@ footer {
 
 #boxes {
     margin-top:20px;
-    padding-left: 0px;
+    padding: 0 10px 0 10px;
+    display: flex;
+    align-content: center;
 
 }
 
 #boxes .container {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin-left: 20px;
+    padding: 0 0 0 -10px;
+    text-align: center;
 }
 
 
@@ -263,6 +371,13 @@ footer {
     border-radius: 10%;
 }
 
+.container .innerbox p{
+    color: #ffffff;
+}
+
+.container .innerbox a {
+    text-decoration: none;
+}
 
 #boxes .box img {
     width: 120px;
@@ -277,7 +392,7 @@ footer {
 }
 
 #MentorModal .modal-footer button a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-weight: bolder;
 }
@@ -288,7 +403,7 @@ footer {
 
 #user-list #boxes .container {
     background-color: #b3b3b3;
-    border-radius: 5%;
+    border-radius: 30px;
 }
 
 #user-list #boxes .container .box {
@@ -327,9 +442,10 @@ footer {
     padding: 1px;
     font-size: 14px;
     font-weight: bolder;
-    color: #ffffff;
+    color: #ff000073;
     line-height: 1em;
-    text-decoration: none
+    text-decoration: none;
+    border: orangered 1px solid;
     
 }
 
@@ -340,9 +456,9 @@ footer {
 
 #main #overview {
     width: 100%;
-    min-height: 300px;
-    background:#b3b3b3;
-    padding: 0;
+    min-height:300px;
+    background:#ffffff;
+    padding: 0 0 0 30px;
     display: grid;
 }
 
@@ -370,15 +486,16 @@ footer {
     width: 220px;
     height: 220px;
     background-color: white;
+    border: orangered 3px solid;
     border-radius: 50%;
     justify-content: center;
-    padding-left: 25px;
+    /* padding-left: 25px; */
 
 }
 
 #main #overview .entity .inner-text {
     text-align: center;
-    padding-top: 80px;
+    padding-top: 80px;  
 }
 
 
@@ -389,6 +506,18 @@ footer {
 #user-list #boxes .container .box .innerbox .line-spacing {
     line-height: 1em;
 }
+
+section .container .box .innerbox  .inner-button {
+    transform: translate(0px, 35px);
+}
+
+#user-list #boxes .container .box .innerbox img {
+    border: 1px;
+    border-radius: 50%;
+    transform: translate(50px, 10px);
+}
+
+
 
 #user-list #boxes .container .box .innerbox span input {
     line-height: 3px;;
@@ -437,6 +566,7 @@ footer {
     background-color: #b3b3b3;
     color:#000000;
     font-weight: bold;
+    height: 40vh;
 }
 
 #user-list #boxes .container button {
@@ -454,3 +584,18 @@ footer {
     font-weight: bold;
 }
 
+/* ------------- allMentorshipToUser page ----------------*/
+
+
+section #boxes .container .box-comment .box-title-comment h3 {
+    color: #6e0000;
+}
+
+section #boxes .container .box-comment .box-rating-comment textarea {
+    width: 70%;
+    background-color: #dfd9d9;
+    color:#000000;
+    font-weight: bold;  
+    font-size: 14px;
+    height: 20vh; 
+}

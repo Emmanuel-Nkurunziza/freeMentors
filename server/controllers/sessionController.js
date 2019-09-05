@@ -1,30 +1,13 @@
+import { User, users } from '../modals/users';
+import { generateToken } from '../helpers/tokenHelpers';
 
-import { generateToken } from '../helpers/tokenHelpers';  // accessing generated tokens from the jwt
-import dotenv from 'dotenv';
-
-
-dotenv.config();
-
-
-//Users can sign up
+//Users can sign up-create an account
 export const signup = (req, res) => {
-	const { email, firstname, lastname, password, address, bio, occupation, expertise} = req.body;
-	const user = {
-		id: users.length + 1,
-		email, 
-		firstname,
-		lastname,
-		password,
-		address,
-		bio,
-		occupation,
-		expertise};
-
+	const user = new User(users.length + 1,req.body.email, req.body.first_name, req.body.last_name, req.body.password, req.body.address, req.body.bio, req.body.occupation, req.body.expertise);
 	users.push(user);
-	const token = generateToken(user.email, process.env.secretOrPrivateKey);
-	console.log(res.body)
+	const token = generateToken(user.email);
 	return res.status(201).send({
-		'status': 201,    //created
+		'status': 201,
 		'message': 'User created successfully',
 		'data': {
 			'id': user.id,
@@ -34,11 +17,11 @@ export const signup = (req, res) => {
 	});
 };
 
-//Users'sign in
+//Login a user
 export const signin = (req, res) => {
-	const token = generateToken(req.body.email);
+	const token = genToken(req.body.email);
 	return res.status(200).send({
-		'status': 200,  //ok
+		'status': 200,
 		'message': 'User is successfully logged in',
 		'data': {
 			'token': token,
@@ -46,7 +29,7 @@ export const signin = (req, res) => {
 	});
 };
 
-//Admin can change a user to a mentor
+//Change a user to a mentor.
 export const updateMentor = (req, res) => {
 
 	const index = users.findIndex(u => u.id == req.params.userId);
@@ -55,18 +38,19 @@ export const updateMentor = (req, res) => {
 		users[index].role = 'Mentor';
 
 		return res.status(200).send({
-			status: 200,  //ok
+			status: 200,
 			message: 'User account changed to mentor'
 		});
 	}
 
 	return res.status(401).send({
-		status:401,  //unauthorized
+		status:401,
 		error: 'Invalid user id'
 	});
 };
 
-//Users view mentors
+//Get all mentors
+
 export const mentors = (req, res) => {
 
 	const mentors = users.filter(u => u.role == 'Mentor');
@@ -77,17 +61,17 @@ export const mentors = (req, res) => {
 	});
 };
 
-//User can view a specific mentor
+//Get a specific mentor by it's id
 export const getMentorId = (req, res) => {
 	const user = users.find(u => u.id  == req.params.userId);
 	if (user) {
 		return res.status(200).send({
-			'status': 200, //ok
+			'status': 200,
 			'data': user
 		});
 	}
 	return res.status(404).send({
-		status: 404, //not found
+		status: 404,
 		message: 'No record found'
 	});
 };
