@@ -15,13 +15,7 @@
                 <h1>Free Mentors / Sign Up </h1>
             </div>
              <nav>
-                 <ul>
-                     <li> <strong>Welcome the registration page</strong> </li> <br>
-                     
-                 </ul>
-                 <ul>
-                    <li> <a href="index.html" class="button">Back_to_homepage</a></li>
-                 </ul>
+               <a href="index.html" class="button">Back_to_homepage</a>
              </nav>
         </div>
     </header>
@@ -30,12 +24,13 @@
          
             <div id="overview">
                 
-                <p><strong>You are invited to fill the form below and subscribe 
-                    to Free Mentors!</strong></p> 
+                    <div class="modal-body center-f-s">
 
 
-    
-                    <div class="modal-body">
+                            <fieldset form="form1">
+                                    <legend>SignUp form:</legend>
+
+
                         <form action="" method="post" class="signUp-form">
                             <p>
                                 <label for="firstname">First Name: </label> <br>
@@ -78,7 +73,7 @@
                             </p>
 
                             <p>
-                                <label for="expertize">Your Expertize: </label> <br>
+                                <label for="expertise">Your Expertise: </label> <br>
                                 <input type="text" id="expertize" name="expertize" placeholder="Enter your expertize..." required>
                             </p>
 
@@ -86,6 +81,8 @@
 
                         
                             <button class="button welcomeModal" type="submit" name="action">Subscribe!</button>
+
+                        </fieldset>
                         
                     </div>
                 
@@ -104,27 +101,28 @@
 
             <div class="modal-content">
     
-                    <header>
-                            <div class="container">
-                                <div class="logo">
-                                    <h1>Free Mentors</h1>
-                                </div>
-                                 <nav>
-                                     <ul>
-                                         <li> <a href="#index.html" class=" button" >back_to_home_page</a></li>
-                                         <li> <a href="signIn.html" class=" button">Sign in</a></li>
-                                         <li> <a href="signUp.html" class=" button">&times;</a></li>
-                                     </ul>
-                                 </nav>
-                            </div>
-                        </header>
+                        <div class="modal-header">
+                            <h3>Welcome to Free Mentors</h3>
+                                <span class="button"> <a href="signIn.html">Sign in</a> </span>                          
+                        </div>
     
                         <div class="modal-body">
                     
                                 <p>
-                                Your have successfully signed up... <br>
-                                WELCOME TO FREE MENTORS...                            
+                                Your have successfully signed up as ... <br>                                                        
+                                                          
                                 </p>
+                                <fieldset form="form1">
+                                        <legend>User's details:</legend>
+
+                                <p> <strong>First Name:</strong> Walter</p> 
+                                <p> <strong>Last Name:</strong> Safari</p> 
+                                <p> <strong>Email:</strong> walterSafari@gmail.com</p> 
+                                <p> <strong>Your Adress:</strong> Kigali, Rwanda</p>
+                                <p> <strong>Your Occupation:</strong> Student</p>
+                                <p> <strong>Major studies in:</strong> Computer Science</p>
+                            
+                                </fieldset>
                                   
                         </div>
      

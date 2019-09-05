@@ -59,7 +59,7 @@ welcomingModalButton.addEventListener('click', openWelcomeModal);
 signInModalButton.addEventListener('click', openSignInModal);
 closeMondalSignUpButton.addEventListener('click', closeSignUpModal);
 closeMondalSignInButton.addEventListener('click', closeSignInModal);
-window.addEventListener('click', closeSignUpModalOut);
+window.addEventListener('click', closeSignUpModalOut);4
 window.addEventListener('click', closeSignInModalOut);
 
 

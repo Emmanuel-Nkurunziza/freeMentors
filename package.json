@@ -19,10 +19,6 @@
   },
   "homepage": "https://github.com/Emmanuel-Nkurunziza/freeMentors#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "validator": "^11.1.0",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
@@ -30,7 +26,14 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "@babel/runtime": "^7.5.5",
-    "babel-loader": "^8.0.6"
+    "@hapi/joi": "^15.1.1",
+    "babel-loader": "^8.0.6",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "validator": "^11.1.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
