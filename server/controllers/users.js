@@ -1,28 +1,21 @@
 
 import { generateToken } from '../helpers/tokenHelpers';  // accessing generated tokens from the jwt
 import dotenv from 'dotenv';
+import {User,users} from "../modals/users";
+
 
 
 dotenv.config();
 
 
-//Users can sign up
+//Users can sign up *** where to insert the user to get the token of the mentor
 export const signup = (req, res) => {
-	const { email, firstname, lastname, password, address, bio, occupation, expertise} = req.body;
-	const user = {
-		id: users.length + 1,
-		email, 
-		firstname,
-		lastname,
-		password,
-		address,
-		bio,
-		occupation,
-		expertise};
-
+	console.log('before user signin', users);
+	
+	const user = new User(users.length + 1, req.body.email, req.body.firstname, req.body.lastname, req.body.password,req.body.address,req.body.bio, req.body.occupation, req.body.expertise);
 	users.push(user);
-	const token = generateToken(user.email, process.env.secretOrPrivateKey);
-	console.log(res.body)
+	console.log('after user signin', users);
+	const token = generateToken(user.email);
 	return res.status(201).send({
 		'status': 201,    //created
 		'message': 'User created successfully',
@@ -30,6 +23,7 @@ export const signup = (req, res) => {
 			'id': user.id,
 			'token': token,
 			'message': 'User created successfully',
+			   
 		}
 	});
 };
@@ -48,11 +42,11 @@ export const signin = (req, res) => {
 
 //Admin can change a user to a mentor
 export const updateMentor = (req, res) => {
-
 	const index = users.findIndex(u => u.id == req.params.userId);
-
+	
 	if (index > -1) {
 		users[index].role = 'Mentor';
+		console.log('after user changed', users, 'index', index);
 
 		return res.status(200).send({
 			status: 200,  //ok
