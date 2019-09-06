@@ -4,31 +4,33 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export function checkToken(req, res, next) {
-	const token = req.header('token');
+const checkToken = (req, res, next) => {
 
-	if (!token) return res.status(401).send({
-		'status': 401,					//un authorized
-		'message': 'Please signin in first.'
-	});
+	const token = req.headers.token;
+
+	if (!token) {
+		return res.status(401).send({
+			'status': 401,					//un authorized
+			'message': 'Please signin in first.'
+		});
+	}
 	try {
-		console.log(process.env.KEY)
 		const verified = jwt.verify(token, process.env.secretOrPrivateKey); 
-
 		const u = users.find(u => u.email == verified.email);
 
 		req.user = {
 			'token': verified,
 			'email': verified.email,
 			'role': u.role,
-			'id': u.Id,
-			'userFullName': `${u.first_name} ${u.last_name}`
+			'id': u.id,
+			'userFullName': `${u.firstname} ${u.lastname}`
 		}; 
 		next();
 	} catch (error) {
-		res.status(400).send({
+		return res.status(400).send({
 			'status': 400,     //bad request
 			'error': 'Invalid token!'
 		});
 	}
 }
+export default checkToken;

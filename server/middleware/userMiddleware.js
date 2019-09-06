@@ -1,5 +1,5 @@
 
-import { users } from '../modals/users';
+import {users} from '../modals/users';
 import bcrypt from 'bcrypt';
 
 // this function check if email of user is exist arleady into the system
@@ -25,10 +25,10 @@ export const hashPass = async (req, res, next) => {
 
 export const authantic = async (req, res, next) => {
 	const user = users.find(user => user.email == req.body.email);
-	console.log(users);
+	
 	if (user) {
 		const validPassword = await bcrypt.compare(req.body.password, user.password);
-		console.log(validPassword);
+		
 		if (validPassword) {
 			req.body.userId = user.userId;
 		}
@@ -50,7 +50,7 @@ export const authantic = async (req, res, next) => {
 
 /// if admin is in the system
 export const isAdmin = (req, res, next) => {
-	if (req.user.role == 'Admin') {
+	if (req.user.role === 'Admin') {
 		next();
 	} else {
 		return res.status(403).send({
